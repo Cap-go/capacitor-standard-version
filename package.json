@@ -1,0 +1,32 @@
+{
+  "name": "capacitor-standard-version",
+  "version": "1.0.0",
+  "description": "Default standard-version config for capacitor app",
+  "main": "index.js",
+  "bin": {
+    "capacitor-standard-version": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cap-go/capacitor-standard-version.git"
+  },
+  "keywords": [
+    "capacitor",
+    "standard-version",
+    "bin",
+    "cli"
+  ],
+  "author": "Martin Donadieu <martindonadieu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cap-go/capacitor-standard-version/issues"
+  },
+  "homepage": "https://github.com/Cap-go/capacitor-standard-version#readme",
+  "dependencies": {
+    "merge-deep": "^3.0.3",
+    "standard-version": "^9.3.2"
+  }
+}
