@@ -36,7 +36,6 @@ const baseConfig = {
 
 async function run() {
   try {
-    console.log('command', command)
     // merge base config with user config
     const finalConfig = merge(baseConfig, command.argv);
     await standardVersion(finalConfig);
