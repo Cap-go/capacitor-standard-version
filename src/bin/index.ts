@@ -1,5 +1,5 @@
 import standardVersion from 'standard-version';
-import { getConfiguration } from 'standard-version/lib/configuration';
+import command from 'standard-version/command';
 import merge from 'merge-deep';
 import * as ios from './ios';
 import * as android from './android';
@@ -36,9 +36,9 @@ const baseConfig = {
 
 async function run() {
   try {
-    const config = getConfiguration();
+    console.log('command', command)
     // merge base config with user config
-    const finalConfig = merge(baseConfig, config);
+    const finalConfig = merge(baseConfig, command.argv);
     await standardVersion(finalConfig);
   } catch (error) {
     console.error(error);

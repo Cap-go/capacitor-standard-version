@@ -1,10 +1,10 @@
 {
   "name": "capacitor-standard-version",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Default standard-version config for capacitor app",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
-    "capacitor-standard-version": "index.js"
+    "capacitor-standard-version": "dist/index.js"
   },
   "scripts": {
     "dev": "set NODE_ENV=development&& npx webpack --config webpack.config.js",
