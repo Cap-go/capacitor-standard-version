@@ -7,7 +7,6 @@ import * as android from './android';
 const baseConfig = {
   noVerify: true,
   tagPrefix: '',
-  releaseCommitMessageFormat: "chore(release): {{currentTag}} [skip ci]",
   packageFiles: [
     {
       filename: "./package.json",
