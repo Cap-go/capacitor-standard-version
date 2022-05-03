@@ -4,8 +4,12 @@ export const readVersion = (contents) => {
 }
 
 export const writeVersion = (contents, version) => {
-    const newContent = contents.replace(/(.*(?:versionName[ \t]+).*)/g, `        versionName "${version}"`)
-    const versionCode = Number(version.split('.').map(v => v.length === 1 ? `0${v}` : v).join('').replace(/\D/g, ''))
-    const finalContent = newContent.replace(/(.*(?:versionCode[ \t]+).*)/g, `        versionCode ${versionCode}`)
+    const versionPure = version.split('-')[0]
+    const newContent = contents.replace(/(.*(?:versionName[ \t]+).*)/g, `\t\tversionName "${versionPure}"`)
+    let versionCode = Number(version.replace(/-.*?\./g, '').split('.').map(v => v.length === 1 ? `0${v}` : v).join(''))
+    if (versionCode < 1000000) {
+        versionCode *= 100
+    }
+    const finalContent = newContent.replace(/(.*(?:versionCode[ \t]+).*)/g, `\t\tversionCode ${versionCode}`)
     return finalContent
 }
