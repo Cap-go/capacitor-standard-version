@@ -6,6 +6,6 @@ export const readVersion = (contents) => {
 
 export const writeVersion = (contents, version) => {
     const newContent = contents.replace(/(.*(?:MARKETING_VERSION[ \t]+).*)/g, `       MARKETING_VERSION = "${version}"`)
-    const finalContent = newContent.replace(/(.*(?:CURRENT_PROJECT_VERSION[ \t]+).*)/g, `       CURRENT_PROJECT_VERSION "${version}"`)
+    const finalContent = newContent.replace(/(.*(?:CURRENT_PROJECT_VERSION[ \t]+).*)/g, `       CURRENT_PROJECT_VERSION = "${version}"`)
     return finalContent
 }
