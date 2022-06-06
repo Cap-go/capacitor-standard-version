@@ -5,3 +5,49 @@ Default config for standard-version for capacitor app
 use it at builtin replacement of https://www.npmjs.com/package/standard-version
 
 All config from .versionrc, .versionrc.json or .versionrc.js are supported
+
+
+## Install 
+
+
+`npm i capacitor-standard-version`
+
+Then run `npx capacitor-standard-version` for update main version or `npx capacitor-standard-version --prerelease alpha` for alpha release for dev branch.
+
+Exemple of Github action to do it on every commit in `main` and `development`
+
+```yml
+on:
+  push:
+    branches:
+      - main
+      - development
+
+jobs:
+  bump-version:
+    if: "!startsWith(github.event.head_commit.message, 'chore(release):')"
+    runs-on: ubuntu-latest
+    name: "Bump version and create changelog with standard version"
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: '${{ secrets.PERSONAL_ACCESS_TOKEN }}'
+      - name: Git config
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Create bump and changelog
+        if: github.ref == 'refs/heads/main'
+        run: npx capacitor-standard-version
+      - name: Create bump and changelog
+        if: github.ref != 'refs/heads/main'
+        run: npx capacitor-standard-version --prerelease alpha
+      - name: Push to origin
+        run: |
+          CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+          remote_repo="https://${GITHUB_ACTOR}:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
+          git pull $remote_repo $CURRENT_BRANCH
+          git push $remote_repo HEAD:$CURRENT_BRANCH --follow-tags --tags
+```
