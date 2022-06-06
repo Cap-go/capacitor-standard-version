@@ -53,3 +53,4 @@ jobs:
           git pull $remote_repo $CURRENT_BRANCH
           git push $remote_repo HEAD:$CURRENT_BRANCH --follow-tags --tags
 ```
+For this action to work you have to add as env var `PERSONAL_ACCESS_TOKEN` you can create it by following this doc https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
