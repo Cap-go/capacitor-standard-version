@@ -12,7 +12,9 @@ All config from .versionrc, .versionrc.json or .versionrc.js are supported
 
 `npm i capacitor-standard-version`
 
-Then run `npx capacitor-standard-version` for update main version or `npx capacitor-standard-version --prerelease alpha` for alpha release for dev branch.
+## Usage
+
+Run `npx capacitor-standard-version` for update main version or `npx capacitor-standard-version --prerelease alpha` for alpha release for dev branch.
 
 Exemple of Github action to do it on every commit in `main` and `development`
 
