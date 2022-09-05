@@ -12,6 +12,6 @@ export const writeVersion = (contents, version) => {
         versionCode *= 100
     }
     const finalContent = newContent
-        .replace(/(.*(?:CURRENT_PROJECT_VERSION[ \t]+).*)/g, `\t\t\t\tCURRENT_PROJECT_VERSION = "${versionPure}";`)
+        .replace(/(.*(?:CURRENT_PROJECT_VERSION[ \t]+).*)/g, `\t\t\t\tCURRENT_PROJECT_VERSION = "${versionCode}";`)
     return finalContent
 }
