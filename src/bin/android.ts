@@ -15,11 +15,13 @@ export const writeVersion = (contents, version) => {
       .map(v => (v.length === 1 ? `0${v}` : v))
       .join('')
   );
-  const versionCodeBeta = Number(versionBata);
-  if (versionCodeBeta < 100) {
-    versionCode = versionCode * 100 + versionCodeBeta;
-  } else {
-    versionCode += versionCodeBeta;
+  if (versionBata) {
+    const versionCodeBeta = Number(versionBata.split('.')[1]);
+    if (versionCodeBeta < 100) {
+      versionCode = versionCode * 100 + versionCodeBeta;
+    } else {
+      versionCode += versionCodeBeta;
+    }
   }
   const finalContent = newContent.replace(
     /(.*(?:versionCode[ \t]+).*)/g,
