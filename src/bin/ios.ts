@@ -1,3 +1,5 @@
+import { versionBetaToCode, versionCodeToCodeBeta, versionPureToCode } from './utils';
+
 export const readVersion = contents => {
   const marketingVersionString = contents.match(/MARKETING_VERSION = [0-9]*.[0-9]*.[0-9]*/);
   const version = marketingVersionString.toString().split('=')[1].trim();
@@ -5,31 +7,17 @@ export const readVersion = contents => {
 };
 
 export const writeVersion = (contents, version) => {
-  const [versionPure, versionBata] = version.split('-');
+  const [versionPure, versionBeta] = version.split('-');
   const newContent = contents.replace(
     /(.*(?:MARKETING_VERSION[ \t]+).*)/g,
     `\t\t\t\tMARKETING_VERSION = "${versionPure}";`
   );
-  let versionCode = Number(
-    versionPure
-      .split('.')
-      .map(v => (v.length === 1 ? `0${v}` : v))
-      .join('')
-  );
-  if (versionBata) {
-    const versionCodeBeta = Number(versionBata.split('.')[1]);
-    if (versionCodeBeta < 100) {
-      versionCode = versionCode * 100 + versionCodeBeta;
-    } else {
-      versionCode += versionCodeBeta;
-    }
-  } else {
-    // keep the order of the versionCode main version should be bigger than beta version
-    versionCode = versionCode * 100 + 99;
-  }
+  let versionCode = versionPureToCode(versionPure);
+  let versionCodeBeta = versionBetaToCode(versionBeta);
+  const versionCodeFinal = versionCodeToCodeBeta(versionCode, versionCodeBeta);
   const finalContent = newContent.replace(
     /(.*(?:CURRENT_PROJECT_VERSION[ \t]+).*)/g,
-    `\t\t\t\tCURRENT_PROJECT_VERSION = "${versionCode}";`
+    `\t\t\t\tCURRENT_PROJECT_VERSION = "${versionCodeFinal}";`
   );
   return finalContent;
 };
