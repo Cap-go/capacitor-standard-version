@@ -23,6 +23,8 @@ export const writeVersion = (contents, version) => {
     } else {
       versionCode += versionCodeBeta;
     }
+  } else {
+    versionCode = versionCode * 100;
   }
   const finalContent = newContent.replace(
     /(.*(?:CURRENT_PROJECT_VERSION[ \t]+).*)/g,
