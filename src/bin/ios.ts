@@ -24,7 +24,8 @@ export const writeVersion = (contents, version) => {
       versionCode += versionCodeBeta;
     }
   } else {
-    versionCode = versionCode * 100;
+    // keep the order of the versionCode main version should be bigger than beta version
+    versionCode = versionCode * 100 + 99;
   }
   const finalContent = newContent.replace(
     /(.*(?:CURRENT_PROJECT_VERSION[ \t]+).*)/g,
