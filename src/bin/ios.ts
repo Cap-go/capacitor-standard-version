@@ -10,14 +10,14 @@ export const writeVersion = (contents, version) => {
   const [versionPure, versionBeta] = version.split('-');
   const newContent = contents.replace(
     /(.*(?:MARKETING_VERSION[ \t]+).*)/g,
-    `\t\t\t\tMARKETING_VERSION = "${versionPure}";`
+    `\t\t\t\tMARKETING_VERSION = ${versionPure};`
   );
   let versionCode = versionPureToCode(versionPure);
   let versionCodeBeta = versionBetaToCode(versionBeta);
   const versionCodeFinal = versionCodeToCodeBeta(versionCode, versionCodeBeta);
   const finalContent = newContent.replace(
     /(.*(?:CURRENT_PROJECT_VERSION[ \t]+).*)/g,
-    `\t\t\t\tCURRENT_PROJECT_VERSION = "${versionCodeFinal}";`
+    `\t\t\t\tCURRENT_PROJECT_VERSION = ${versionCodeFinal};`
   );
   return finalContent;
 };
