@@ -48,7 +48,7 @@
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "eslint-plugin-typescript-sort-keys": "^2.1.0",
     "git-format-staged": "^3.0.0",
-    "husky": "^7.0.4",
+    "husky": "^8.0.0",
     "nodemon": "^2.0.15",
     "pkg": "^5.5.2",
     "prettier": "^2.7.1",

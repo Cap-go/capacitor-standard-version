@@ -15,7 +15,7 @@ specifiers:
   eslint-plugin-simple-import-sort: ^8.0.0
   eslint-plugin-typescript-sort-keys: ^2.1.0
   git-format-staged: ^3.0.0
-  husky: ^7.0.4
+  husky: ^8.0.0
   merge-deep: ^3.0.3
   nodemon: ^2.0.15
   pkg: ^5.5.2
@@ -51,7 +51,7 @@ devDependencies:
   eslint-plugin-simple-import-sort: 8.0.0_eslint@8.23.0
   eslint-plugin-typescript-sort-keys: 2.1.0_iurrlxgqcgk5svigzxakafpeuu
   git-format-staged: 3.0.0
-  husky: 7.0.4
+  husky: 8.0.2
   nodemon: 2.0.19
   pkg: 5.8.0
   prettier: 2.7.1
@@ -2197,9 +2197,9 @@ packages:
       - supports-color
     dev: true
 
-  /husky/7.0.4:
-    resolution: {integrity: sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==}
-    engines: {node: '>=12'}
+  /husky/8.0.2:
+    resolution: {integrity: sha512-Tkv80jtvbnkK3mYWxPZePGFpQ/tT3HNSs/sasF9P2YfkMezDl3ON37YN6jUUI4eTg5LcyVynlb6r4eyvOmspvg==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
