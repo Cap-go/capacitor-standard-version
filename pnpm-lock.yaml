@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@types/adm-zip': ^0.4.34
+  '@types/adm-zip': ^0.5.0
   '@types/fs-extra': ^9.0.13
   '@types/node': ^18.7.15
   '@typescript-eslint/eslint-plugin': ^5.36.1
@@ -37,7 +37,7 @@ dependencies:
   standard-version: 9.5.0
 
 devDependencies:
-  '@types/adm-zip': 0.4.34
+  '@types/adm-zip': 0.5.0
   '@types/fs-extra': 9.0.13
   '@types/node': 18.7.15
   '@typescript-eslint/eslint-plugin': 5.36.2_iurrlxgqcgk5svigzxakafpeuu
@@ -283,8 +283,8 @@ packages:
     resolution: {integrity: sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==}
     dev: true
 
-  /@types/adm-zip/0.4.34:
-    resolution: {integrity: sha512-8ToYLLAYhkRfcmmljrKi22gT2pqu7hGMDtORP1emwIEGmgUTZOsaDjzWFzW5N2frcFRz/50CWt4zA1CxJ73pmQ==}
+  /@types/adm-zip/0.5.0:
+    resolution: {integrity: sha512-FCJBJq9ODsQZUNURo5ILAQueuA8WJhRvuihS3ke2iI25mJlfV2LK8jG2Qj2z2AWg8U0FtWWqBHVRetceLskSaw==}
     dependencies:
       '@types/node': 18.7.15
     dev: true
