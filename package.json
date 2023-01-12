@@ -1,6 +1,6 @@
 {
   "name": "capacitor-standard-version",
-  "version": "1.1.8",
+  "version": "1.1.7",
   "description": "Default standard-version config for capacitor app",
   "main": "dist/index.js",
   "bin": {
@@ -31,8 +31,8 @@
   },
   "homepage": "https://github.com/Cap-go/capacitor-standard-version#readme",
   "dependencies": {
-    "merge-deep": "^3.0.3",
-    "standard-version": "^9.5.0"
+    "@capgo/standard-version": "^1.0.6",
+    "merge-deep": "^3.0.3"
   },
   "devDependencies": {
     "@types/adm-zip": "^0.5.0",

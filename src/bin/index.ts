@@ -1,9 +1,9 @@
 import * as android from './android';
 import * as ios from './ios';
 
+import standardVersion from '@capgo/standard-version';
+import command from '@capgo/standard-version/command';
 import merge from 'merge-deep';
-import standardVersion from 'standard-version';
-import command from 'standard-version/command';
 
 const baseConfig = {
   noVerify: true,
