@@ -3,8 +3,8 @@ import { versionBetaToCode, versionCodeToCodeBeta, versionPureToCode } from './u
 const regexM = /versionName\s"(.*)"$/g;
 const regexC = /versionCode\s(.*)$/g;
 export const readVersion = contents => {
-  const marketingVersionString = contents.match(regexM);
-  const version = marketingVersionString.replace(regexM, '$1');
+  const vString = contents.match(regexM);
+  const version = vString && vString[0] ? vString.replace(regexM, '$1') : null;
   return version;
 };
 
