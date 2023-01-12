@@ -7,6 +7,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
+* iisue build ([fed33cf](https://github.com/Cap-go/capacitor-standard-version/commit/fed33cf808a65a7b7a405186d3cd83f0b8dcb650))
+* upgrade script for standar version ([e164b26](https://github.com/Cap-go/capacitor-standard-version/commit/e164b261a822504d4d2c7e6b4917bbe3281e7884))
+* use fork ([a7e9621](https://github.com/Cap-go/capacitor-standard-version/commit/a7e9621b9cc54dc3b9dd4f17b05b1e6882abbb96))
+
+### [1.1.8](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.7...v1.1.8) (2023-01-12)
+
+
+### Bug Fixes
+
 * upgrade script for standar version ([e164b26](https://github.com/Cap-go/capacitor-standard-version/commit/e164b261a822504d4d2c7e6b4917bbe3281e7884))
 
 ### [1.1.7](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.6...v1.1.7) (2023-01-12)
