@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.9](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.8...v1.1.9) (2023-01-15)
+
+
+### Bug Fixes
+
+* trigger ci ([1661894](https://github.com/Cap-go/capacitor-standard-version/commit/1661894a11578c8423408d1cf1491aa331dec9d9))
+
 ### [1.1.8](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.7...v1.1.8) (2023-01-12)
 
 
