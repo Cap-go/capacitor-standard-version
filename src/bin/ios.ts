@@ -11,10 +11,13 @@ export function readVersion(contents) {
 
 export function writeVersion(contents, version) {
   const [versionPure, versionBeta] = version.split('-');
-  const newContent = contents.replace(regexM, `MARKETING_VERSION = ${versionPure};`);
+  const newContent = contents.replace(regexM, `MARKETING_VERSION = ${versionPure};\n`);
   let versionCode = versionPureToCode(versionPure);
   let versionCodeBeta = versionBetaToCode(versionBeta);
   const versionCodeFinal = versionCodeToCodeBeta(versionCode, versionCodeBeta);
-  const finalContent = newContent.replace(regexC, `CURRENT_PROJECT_VERSION = ${versionCodeFinal};`);
+  const finalContent = newContent.replace(
+    regexC,
+    `CURRENT_PROJECT_VERSION = ${versionCodeFinal};\n`
+  );
   return finalContent;
 }

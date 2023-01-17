@@ -10,10 +10,10 @@ export const readVersion = contents => {
 
 export const writeVersion = (contents, version) => {
   const [versionPure, versionBeta] = version.split('-');
-  const newContent = contents.replace(regexM, `versionName "${versionPure}"`);
+  const newContent = contents.replace(regexM, `versionName "${versionPure}"\n`);
   let versionCode = versionPureToCode(versionPure);
   let versionCodeBeta = versionBetaToCode(versionBeta);
   const versionCodeFinal = versionCodeToCodeBeta(versionCode, versionCodeBeta);
-  const finalContent = newContent.replace(regexC, `versionCode ${versionCodeFinal}`);
+  const finalContent = newContent.replace(regexC, `versionCode ${versionCodeFinal}\n`);
   return finalContent;
 };
