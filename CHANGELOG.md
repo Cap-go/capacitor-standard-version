@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.11](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.10...v1.1.11) (2023-01-17)
+
+
+### Bug Fixes
+
+* issue missing newline ([9461b35](https://github.com/Cap-go/capacitor-standard-version/commit/9461b35d5c4ce509e019027f1e2aa8f0e2720fae))
+
 ### [1.1.10](https://github.com/Cap-go/capacitor-standard-version/compare/v1.1.9...v1.1.10) (2023-01-17)
 
 
